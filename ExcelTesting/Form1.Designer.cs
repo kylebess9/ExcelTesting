@@ -42,6 +42,7 @@
             this.btnSubmitFile2 = new System.Windows.Forms.Button();
             this.lbxOutputFile1 = new System.Windows.Forms.ListBox();
             this.lbxOutputFile2 = new System.Windows.Forms.ListBox();
+            this.openFile = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,12 +107,13 @@
             this.btnSharePoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSharePoint.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSharePoint.ForeColor = System.Drawing.Color.White;
-            this.btnSharePoint.Location = new System.Drawing.Point(551, 27);
+            this.btnSharePoint.Location = new System.Drawing.Point(549, 27);
             this.btnSharePoint.Name = "btnSharePoint";
-            this.btnSharePoint.Size = new System.Drawing.Size(149, 54);
+            this.btnSharePoint.Size = new System.Drawing.Size(149, 44);
             this.btnSharePoint.TabIndex = 1;
             this.btnSharePoint.Text = "Share Point";
             this.btnSharePoint.UseVisualStyleBackColor = false;
+            this.btnSharePoint.Click += new System.EventHandler(this.btnSharePoint_Click);
             // 
             // btnLoadFile2
             // 
@@ -162,7 +164,7 @@
             this.btnSubmitFile2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmitFile2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSubmitFile2.ForeColor = System.Drawing.Color.White;
-            this.btnSubmitFile2.Location = new System.Drawing.Point(663, 867);
+            this.btnSubmitFile2.Location = new System.Drawing.Point(651, 867);
             this.btnSubmitFile2.Name = "btnSubmitFile2";
             this.btnSubmitFile2.Size = new System.Drawing.Size(149, 43);
             this.btnSubmitFile2.TabIndex = 5;
@@ -173,9 +175,9 @@
             // 
             this.lbxOutputFile1.FormattingEnabled = true;
             this.lbxOutputFile1.ItemHeight = 15;
-            this.lbxOutputFile1.Location = new System.Drawing.Point(-1, 152);
+            this.lbxOutputFile1.Location = new System.Drawing.Point(12, 152);
             this.lbxOutputFile1.Name = "lbxOutputFile1";
-            this.lbxOutputFile1.Size = new System.Drawing.Size(647, 709);
+            this.lbxOutputFile1.Size = new System.Drawing.Size(634, 709);
             this.lbxOutputFile1.TabIndex = 6;
             // 
             // lbxOutputFile2
@@ -184,14 +186,18 @@
             this.lbxOutputFile2.ItemHeight = 15;
             this.lbxOutputFile2.Location = new System.Drawing.Point(651, 152);
             this.lbxOutputFile2.Name = "lbxOutputFile2";
-            this.lbxOutputFile2.Size = new System.Drawing.Size(657, 709);
+            this.lbxOutputFile2.Size = new System.Drawing.Size(645, 709);
             this.lbxOutputFile2.TabIndex = 7;
+            // 
+            // openFile
+            // 
+            this.openFile.FileName = "openFile";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1308, 996);
+            this.ClientSize = new System.Drawing.Size(1308, 931);
             this.Controls.Add(this.lbxOutputFile2);
             this.Controls.Add(this.lbxOutputFile1);
             this.Controls.Add(this.btnSubmitFile2);
@@ -226,5 +232,6 @@
         private Button btnSubmitFile2;
         private ListBox lbxOutputFile1;
         private ListBox lbxOutputFile2;
+        private OpenFileDialog openFile;
     }
 }

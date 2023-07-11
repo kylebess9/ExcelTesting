@@ -37,6 +37,11 @@ namespace ExcelTesting
         public ExcelFileHandler()
         {
             xlApp = new Excel.Application();
+            
+        }
+
+        public void LoadFile()
+        {
             wb = xlApp.Workbooks.Open("C:\\Users\\p1773957\\source\\repos\\ExcelTesting\\ExcelTesting\\data\\Working - 17503615 Annual Planning.xlsm");
             ws = wb.Worksheets[1];
             range = ws.UsedRange;
