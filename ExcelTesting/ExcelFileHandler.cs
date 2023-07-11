@@ -25,7 +25,15 @@ namespace ExcelTesting
         public ExcelFileHandler(string path)
         {
             xlApp = new Excel.Application();
+
+            
+        }
+
+        public void LoadFile()
+        {
+
             wb = xlApp.Workbooks.Open(path);
+
             ws = wb.Worksheets[1];
             range = ws.UsedRange;
             projectObjects = new List<projectObject>();
